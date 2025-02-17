@@ -1,6 +1,6 @@
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
-import curvedLine from "@/public/images/curved-arrow.svg";
+// import curvedLine from "@/public/images/curved-arrow.svg";
 
 const ValueCard = ({
   title,
@@ -67,11 +67,11 @@ const Partner = () => {
           </div>
           <div className="relative text-[#0d519d] text-2xl lg:text-[56px] font-semibold leading-[68px]">
             partner with lasting trust
-            <Image
+            {/* <Image
               src={curvedLine}
               alt="curvedLine"
-              className="hidden lg:block absolute right-0 -bottom-[8px]"
-            />
+              className="hidden lg:block absolute right-0 w-[200px] -bottom-[8px]"
+            /> */}
           </div>
         </div>
         <p className="w-auto lg:w-[865px] text-[#919191] text-lg lg:text-xl font-normal leading-[30px]">

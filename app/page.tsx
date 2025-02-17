@@ -3,6 +3,8 @@ import Image from "next/image";
 import Hero from "./components/home/Hero";
 import Welcome from "./components/home/Welcome";
 import Partner from "./components/home/Partner";
+import Empower from "./components/home/Empower";
+import Voices from "./components/home/Voices";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <Hero />
       <Welcome />
       <Partner />
+      <Empower />
+      <Voices />
 
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
