@@ -22,7 +22,6 @@ const Building = () => {
   const handleHover = (
     e: React.MouseEvent<SVGRectElement> | React.MouseEvent<SVGPolygonElement>
   ) => {
-    // currentTarget is the element the event listener is bound to
     const element = e.currentTarget;
     const elementId = element.id || Math.random().toString(); // Unique ID if none
 
@@ -31,12 +30,17 @@ const Building = () => {
       clearTimeout(activeTimeouts[elementId]);
     }
 
-    // Change color immediately
-    element.style.fill = getRandomColor();
+    // Pick a random color
+    const color = getRandomColor();
 
-    // Set timeout to revert color after 300 ms
+    // Apply fill + drop shadow
+    element.style.fill = color;
+    element.style.filter = `drop-shadow(0 0 8px ${color})`;
+
+    // Schedule revert after 300ms
     const timeout = setTimeout(() => {
       element.style.fill = getRandomBasicColor();
+      element.style.filter = "none";
 
       // Clean up from state
       setActiveTimeouts((prev) => {
@@ -46,7 +50,7 @@ const Building = () => {
       });
     }, 300);
 
-    // Store this timeout in state
+    // Store timeout in state
     setActiveTimeouts((prev) => ({
       ...prev,
       [elementId]: timeout,

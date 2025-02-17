@@ -7,6 +7,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* Example if you use Tailwind (postcss)  */
+.font-cabin {
+  font-family: var(--font-cabin-condensed), sans-serif;
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;

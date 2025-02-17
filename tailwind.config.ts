@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        geist: "var(--font-geist-sans)",
+        mono: "var(--font-geist-mono)",
+        cabin: "var(--font-cabin-condensed)",
+      },
     },
   },
   plugins: [],

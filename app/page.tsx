@@ -1,12 +1,16 @@
 import Image from "next/image";
 // import BuildComp from "./components/BuildComp";
-import Building from "./components/Building";
+import Hero from "./components/home/Hero";
+import Welcome from "./components/home/Welcome";
+import Partner from "./components/home/Partner";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-8 row-start-2 items-center ">
+    <main className="flex flex-col gap-10 lg:gap-[140px] row-start-2 items-center ">
       {/* <BuildComp /> */}
-      <Building />
+      <Hero />
+      <Welcome />
+      <Partner />
 
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
