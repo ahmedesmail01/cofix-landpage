@@ -5,11 +5,11 @@ import fxStrok from "@/public/images/fx-strok.svg";
 
 const Welcome = () => {
   return (
-    <div className="flex relative flex-col text-center items-center justify-center gap-4 p-4 lg:gap-8">
+    <div className="flex overflow-hidden relative flex-col text-center items-center justify-center gap-4 p-4 lg:gap-8">
       <Image
         src={fxStrok}
         alt="stroke"
-        className="absolute top-0 -right-[300px]"
+        className="absolute hidden lg:block top-0 -right-[300px]"
       />
 
       <div>
