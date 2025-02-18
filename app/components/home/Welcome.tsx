@@ -1,10 +1,17 @@
 import Image from "next/image";
 import React from "react";
 import curvedLine from "@/public/images/curved-arrow.svg";
+import fxStrok from "@/public/images/fx-strok.svg";
 
 const Welcome = () => {
   return (
-    <div className="flex flex-col text-center items-center justify-center gap-4 p-4 lg:gap-8">
+    <div className="flex relative flex-col text-center items-center justify-center gap-4 p-4 lg:gap-8">
+      <Image
+        src={fxStrok}
+        alt="stroke"
+        className="absolute top-0 -right-[300px]"
+      />
+
       <div>
         <div className="text-center text-[#159861] text-base font-semibold ">
           Hello!
