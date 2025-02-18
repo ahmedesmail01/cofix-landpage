@@ -23,10 +23,11 @@ const NavBar = () => {
     // 1) Add translucent background + backdrop blur to the header
     <header
       className="
-      fixed top-0 left-0 w-full z-10 
+      fixed top-0 left-0 w-full 
       bg-white/30 
       backdrop-blur-md 
       border-b border-white/20
+      z-30
     "
     >
       <div className="flex items-center justify-between px-4 py-1 lg:py-3 lg:px-[120px]">

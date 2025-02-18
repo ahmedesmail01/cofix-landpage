@@ -4,6 +4,7 @@ import Belief from "../components/about/Belief";
 import Team from "../components/about/Team";
 import Voices from "../components/home/Voices";
 import Industries from "../components/about/Industries";
+import ContactComp from "../components/home/ContactComp";
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <Team />
       <Voices />
       <Industries />
+      <ContactComp />
     </div>
   );
 };
