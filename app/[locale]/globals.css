@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 /* Example if you use Tailwind (postcss)  */
 .font-cabin {
   font-family: var(--font-cabin-condensed), sans-serif;
