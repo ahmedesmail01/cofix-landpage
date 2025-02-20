@@ -313,5 +313,132 @@
         "icon": "serviceIcon"
       }
     ]
+  },
+  "ServicesHero": {
+    "title": "This Is How We Can Help You",
+    "description": "We provide you with a lot of channels and services that we provide that can assist your business to grow and thrive. Are you ready for innovation?",
+    "contactButton": "Contact us",
+    "imageAlt": {
+      "building": "Building",
+      "logo": "CorporateFix Logo"
+    }
+  },
+  "WhatServices": {
+    "header": {
+      "title": "What Services We are offering",
+      "description": "We envision businesses operating as cohesive, high-performing entities, driven by innovation, sustainability, and seamless integration. Our dream is to empower organizations to achieve their goals effortlessly while inspiring their teams and creating lasting value."
+    },
+    "services": [
+      {
+        "title": "Management Fitness Programs",
+        "description": [
+          "Designing and implementing comprehensive performance management systems aligned with organizational goals.",
+          "Developing dashboards to monitor results and connect them to strategic objectives."
+        ]
+      },
+      {
+        "title": "Organizational Restructuring",
+        "description": [
+          "Designing and implementing comprehensive performance management systems aligned with organizational goals.",
+          "Developing dashboards to monitor results and connect them to strategic objectives."
+        ]
+      },
+      {
+        "title": "Environment Development",
+        "description": [
+          "Transforming stressful environments into productive and collaboration spaces by establishing clear policies and fostering a positive organizational culture.",
+          "Promoting harmony and teamwork among employees."
+        ]
+      },
+      {
+        "title": "Gap Analysis & Root Solutions",
+        "description": [
+          "Identifying performance deficiencies using advanced analysis tools.",
+          "Providing actionable solutions to address structural and organizational challenges."
+        ]
+      },
+      {
+        "title": "Governance Implementation",
+        "description": [
+          "Establishing automated governance systems to simplify processes and ensure compliance.",
+          "Enhancing institutional procedures to achieve quality and sustainability goals."
+        ]
+      },
+      {
+        "title": "Performance Improvement & Behavioral Development",
+        "description": [
+          "Developing employee skills through customized training programs.",
+          "Implementing tracking systems to ensure measurable progress."
+        ]
+      },
+      {
+        "title": "Recruitment Solutions",
+        "description": [
+          "Utilizing advanced tools like Luscher and ESCO tests to select the right talent for the right roles.",
+          "Accelerating hiring processes and ensuring role compatibility."
+        ]
+      },
+      {
+        "title": "Sales and Logistics Optimization",
+        "description": [
+          "Designing tailored sales strategies to increase revenue.",
+          "Improving supply chain operations for enhanced efficiency and reduced costs."
+        ]
+      },
+      {
+        "title": "Training and Development",
+        "description": [
+          "In partnership with KHDA, we offer certified training programs and diplomas, including: Self-Development.",
+          "Building Successful Relationships.",
+          "Advanced Sales Techniques.",
+          "Effective Leadership.",
+          "Gender Communication.",
+          "Emotional and Behavioral Regulation."
+        ]
+      }
+    ]
+  },
+  "ContactHero": {
+    "title": "Contact Us",
+    "description": "We provide you with a lot of channels and services that can assist your business to grow and thrive. Are you ready for innovation?",
+    "imageAlt": {
+      "building": "Building",
+      "logo": "CorporateFix Logo"
+    }
+  },
+  "Contacts": {
+    "contactTitle": "Contact",
+    "phone": "Phone: +971 2732",
+    "email": {
+      "label": "Email:",
+      "value": "info@corporatefix.net"
+    },
+    "location": {
+      "label": "Location:",
+      "value": "62 Khalifa City, Abu Dhabi, UAE"
+    },
+    "basedInTitle": "Based in",
+    "basedIn": ["Abu Dhabi,", "UAE"],
+    "socialLinks": [
+      {
+        "name": "Facebook",
+        "url": "https://facebook.com"
+      },
+      {
+        "name": "X (Twitter)",
+        "url": "https://twitter.com"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://instagram.com"
+      }
+    ],
+    "imageAlt": {
+      "strok": "Decorative stroke"
+    }
   }
 }

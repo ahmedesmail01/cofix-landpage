@@ -2,7 +2,7 @@ import React from "react";
 import Making from "../components/about/Making";
 import Belief from "../components/about/Belief";
 import Team from "../components/about/Team";
-import Voices from "../components/home/Voices";
+// import Voices from "../components/home/Voices";
 import Industries from "../components/about/Industries";
 import ContactComp from "../components/home/ContactComp";
 
@@ -12,7 +12,7 @@ const page = () => {
       <Making />
       <Belief />
       <Team />
-      <Voices />
+      {/* <Voices /> */}
       <Industries />
       <ContactComp />
     </div>

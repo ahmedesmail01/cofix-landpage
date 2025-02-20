@@ -71,7 +71,7 @@ const NavBar = () => {
           {/* Language Switcher Button */}
           <button
             onClick={handleLanguageChange}
-            className="px-3 py-1 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+            className="px-3 hidden  lg:block py-1 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors"
           >
             {locale === "en" ? "عربي" : "English"}
           </button>
