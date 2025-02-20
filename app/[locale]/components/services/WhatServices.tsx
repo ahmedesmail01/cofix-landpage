@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 interface Service {
   title: string;
@@ -23,7 +23,7 @@ const ServiceItem = ({ service }: { service: Service }) => {
             {service.title}
           </h3>
 
-          <div className="flex-1 flex justify-between items-start w-full">
+          <div className="flex-1  flex justify-between items-start w-full">
             <div
               className={`transition-all duration-500 ease-in-out ${
                 isExpanded
@@ -51,14 +51,18 @@ const ServiceItem = ({ service }: { service: Service }) => {
 
 const WhatServices = () => {
   const t = useTranslations("WhatServices");
+  const locale = useLocale(); // Get the current locale
 
   const services: Service[] = t.raw("services");
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section
+      className="py-16 bg-gray-50"
+      dir={locale === "ar" ? "rtl" : "ltr"} // Dynamically set the direction
+    >
       <div className="container mx-auto lg:px-[120px] px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-[80px] mb-16">
-          <div className="text-[#0d519d]  text-3xl lg:text-[80px] font-bold lg:leading-[100px]">
+          <div className="text-[#0d519d] text-3xl lg:text-[80px] font-bold lg:leading-[100px]">
             {t("header.title")}
           </div>
 

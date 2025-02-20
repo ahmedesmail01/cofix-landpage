@@ -46,7 +46,7 @@ const Footer = () => {
                   <Link
                     key={social.name}
                     href={social.href}
-                    className="w-10 h-10 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors"
+                    className="w-10 h-10 bg-black rounded-full mx-4 flex items-center justify-center hover:bg-gray-800 transition-colors"
                   >
                     <Icon className="text-white text-lg" />
                   </Link>
@@ -103,7 +103,7 @@ const Footer = () => {
                 <li key={resource}>
                   <Link
                     href="#"
-                    className="text-sm text-gray-600 hover:text-gray-900"
+                    className="text-sm text-gray-600  hover:text-gray-900"
                   >
                     {resource}
                   </Link>
