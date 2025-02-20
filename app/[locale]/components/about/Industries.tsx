@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import constructionIcon from "@/public/images/Construction.svg";
@@ -7,24 +9,43 @@ import manufacturingIcon from "@/public/images/Manufacturing.svg";
 import medicalIcon from "@/public/images/Medical Equipment.svg";
 import serviceIcon from "@/public/images/Service Providers.svg";
 import { Store } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-interface IndustryCard {
-  icon: string;
+// Define the icons object with proper types
+const icons = {
+  constructionIcon,
+  pharmaceuticalsIcon,
+  educationIcon,
+  manufacturingIcon,
+  medicalIcon,
+  serviceIcon,
+  storeIcon: <Store className="text-[#0d519d]" />,
+};
+
+type IconKey = keyof typeof icons; // Restrict to keys of the `icons` object
+
+interface Industry {
   title: string;
+  icon: string | React.ReactNode;
 }
 
-const IndustryCard = ({ icon, title }: IndustryCard) => {
+interface IndustryData {
+  title: string;
+  icon: IconKey; // Use IconKey to ensure type safety
+}
+
+const IndustryCard = ({ icon, title }: Industry) => {
   return (
-    <div className="bg-white  p-8 rounded-lg shadow-sm flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
+    <div className="bg-white p-8 rounded-lg shadow-sm flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
       <div className="w-16 h-16 mb-4 relative">
-        <div className="absolute inset-0  rounded-full flex items-center justify-center">
-          {title === "Retail" ? (
+        <div className="absolute inset-0 rounded-full flex items-center justify-center">
+          {title === "Retail" || title === "تجارة التجزئة" ? (
             <div className="flex items-center justify-center p-6 rounded-full bg-[#e8f3ff]">
               {icon}
             </div>
           ) : (
             <Image
-              src={icon}
+              src={icon as string}
               alt={title}
               width={32}
               height={32}
@@ -39,50 +60,28 @@ const IndustryCard = ({ icon, title }: IndustryCard) => {
 };
 
 const Industries = () => {
-  const industries: IndustryCard[] = [
-    {
-      icon: constructionIcon,
-      title: "Construction",
-    },
-    {
-      icon: pharmaceuticalsIcon,
-      title: "Pharmaceuticals",
-    },
-    {
-      icon: educationIcon,
-      title: "Education",
-    },
-    {
-      icon: <Store className=" text-[#0d519d]" />,
-      title: "Retail",
-    },
-    {
-      icon: manufacturingIcon,
-      title: "Manufacturing",
-    },
-    {
-      icon: medicalIcon,
-      title: "Medical Equipment",
-    },
-    {
-      icon: serviceIcon,
-      title: "Service Providers",
-    },
-  ];
+  const t = useTranslations("Industries");
+
+  // Explicitly type the industries array
+  const industries: Industry[] = t
+    .raw("industries")
+    .map((industry: IndustryData) => ({
+      ...industry,
+      icon: icons[industry.icon], // Use IconKey to ensure type safety
+    }));
 
   return (
-    <section className="w-full py-16 ">
+    <section className="w-full py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-gray-600 mb-2">Our Services</p>
+          <p className="text-gray-600 mb-2">{t("header.subtitle")}</p>
           <h2 className="text-[#0d519d] text-4xl font-bold mb-4">
-            Industries We Serve
+            {t("header.title")}
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            CorporateFix has extensive experience serving a diverse range of
-            industries, including
-          </p>
+          <bdi className="text-gray-600 max-w-2xl mx-auto">
+            {t("header.description")}
+          </bdi>
         </div>
 
         {/* Industries Grid */}

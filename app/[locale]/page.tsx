@@ -3,7 +3,7 @@ import Hero from "./components/home/Hero";
 import Welcome from "./components/home/Welcome";
 import Partner from "./components/home/Partner";
 import Empower from "./components/home/Empower";
-import Voices from "./components/home/Voices";
+// import Voices from "./components/home/Voices";
 import Philosophy from "./components/home/Philosophy";
 import ContactComp from "./components/home/ContactComp";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <Welcome />
       <Partner />
       <Empower />
-      <Voices />
+      {/* <Voices /> */}
       <Philosophy />
       <ContactComp />
     </main>

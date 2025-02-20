@@ -23,7 +23,7 @@ const Hero = () => {
         <h1 className="text-center text-[#0f519c] text-xl lg:text-[56px]  font-semibold font-cabin leading-[68px]">
           {t("mainTitle")}
         </h1>
-        <p className="text-center text-[#5e5959] text-base lg:text-2xl font-normal font-['Cabin Condensed']">
+        <p className="text-center text-[#5e5959] text-base lg:text-2xl font-normal my-4 font-['Cabin Condensed']">
           {t("subTitle")} <br /> {t("tagline")}
         </p>
         <div className="w-full text-center flex items-center justify-center gap-4 my-8">

@@ -2,22 +2,15 @@
 
 import React from "react";
 import Slider from "react-slick";
-import Image, { StaticImageData } from "next/image"; // Import StaticImageData
+import Image, { StaticImageData } from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import avatar1 from "@/public/images/person1.svg";
 import avatar2 from "@/public/images/person2.svg";
 import avatar3 from "@/public/images/person3.svg";
+import { useTranslations } from "next-intl";
 
-// Define interfaces for better type safety
 interface TestimonialCardProps {
-  content: string;
-  name: string;
-  position: string;
-  imageUrl: StaticImageData;
-}
-
-interface Testimonial {
   content: string;
   name: string;
   position: string;
@@ -65,29 +58,14 @@ const TestimonialCard = ({
 };
 
 const Voices = () => {
-  const testimonials: Testimonial[] = [
-    {
-      content:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed",
-      name: "Max Jalson",
-      position: "CEO",
-      imageUrl: avatar1,
-    },
-    {
-      content:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed",
-      name: "Max Jalson",
-      position: "CEO",
-      imageUrl: avatar2,
-    },
-    {
-      content:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed",
-      name: "Max Jalson",
-      position: "CEO",
-      imageUrl: avatar3,
-    },
-  ];
+  const t = useTranslations("Voices");
+
+  const avatars = [avatar1, avatar2, avatar3];
+  const testimonials = t.raw("testimonials") as Array<{
+    content: string;
+    name: string;
+    position: string;
+  }>;
 
   const settings = {
     dots: true,
@@ -97,7 +75,7 @@ const Voices = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    arrows: false, // Add this line to remove arrows
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -122,14 +100,14 @@ const Voices = () => {
       <div className="flex flex-col text-center items-center justify-center gap-4 p-4 lg:gap-8">
         <div>
           <div className="text-center text-[#159861] text-base font-semibold">
-            Our Services
+            {t("sectionTitle")}
           </div>
           <div className="relative text-[#0d519d] text-2xl lg:text-[56px] font-semibold leading-[68px]">
-            Voices of Success
+            {t("mainTitle")}
           </div>
         </div>
         <p className="w-auto lg:w-[865px] text-[#919191] text-lg lg:text-xl font-normal leading-[30px]">
-          Real Insights, Lasting Impact, Proven Excellence{" "}
+          {t("subtitle")}
         </p>
       </div>
 
@@ -142,7 +120,7 @@ const Voices = () => {
               content={testimonial.content}
               name={testimonial.name}
               position={testimonial.position}
-              imageUrl={testimonial.imageUrl}
+              imageUrl={avatars[index % avatars.length]}
             />
           ))}
         </Slider>

@@ -98,5 +98,220 @@
         "description": "In collaboration with KHDA, we offer comprehensive training programs including self-development, successful relationships, sales techniques, effective leadership, gender communication, and emotion management"
       }
     }
+  },
+  "Voices": {
+    "sectionTitle": "Our Services",
+    "mainTitle": "Voices of Success",
+    "subtitle": "Real Insights, Lasting Impact, Proven Excellence",
+    "testimonials": [
+      {
+        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed",
+        "name": "Max Jalson",
+        "position": "CEO"
+      },
+      {
+        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed",
+        "name": "Max Jalson",
+        "position": "CEO"
+      },
+      {
+        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed",
+        "name": "Max Jalson",
+        "position": "CEO"
+      }
+    ]
+  },
+  "Philosophy": {
+    "text": {
+      "part1": "Our ",
+      "part2": "Philosophy",
+      "part3": " We believe in fostering partnerships built on ",
+      "part4": "integrity",
+      "part5": " and ",
+      "part6": "trust",
+      "part7": ", ",
+      "part8": "working collaboratively",
+      "part9": " to achieve shared success through innovative solutions"
+    },
+    "contactButton": "Contact us"
+  },
+  "Contact": {
+    "title": "Get in touch with us",
+    "greeting": "Hi, I'm Amanda. Need help? Use the form below or email me at hello@CoFix.com",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Rachel Joe"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Rachel.Joe@domain.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "02055158336"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Your message here..."
+      },
+      "submitButton": "Send"
+    },
+    "imageAlt": {
+      "avatar": "Avatar"
+    }
+  },
+  "Footer": {
+    "description": "CorporateFix is your strategic partner in redefining organizational success. Through our innovative \"Management-Fitness\" concept, we blend strategic management, categorical regulation logic, and corporate governance to transform workplace into productive, harmonious environments",
+    "sections": {
+      "services": {
+        "title": "Services",
+        "items": [
+          "Management Fitness Programs",
+          "Organizational Restructuring",
+          "Workplace Environment",
+          "Gap Analysis & Root",
+          "Governance Implementation",
+          "Performance Improvement",
+          "Recruitment Solutions",
+          "Sales and Logistics Optimization",
+          "Training and Development"
+        ]
+      },
+      "sectors": {
+        "title": "Sectors",
+        "items": [
+          "Construction",
+          "Pharmaceuticals",
+          "Education",
+          "Retail",
+          "Manufacturing",
+          "Medical Equipment",
+          "Service Providers"
+        ]
+      },
+      "resources": {
+        "title": "Resources",
+        "items": ["Videos", "Legal Resources", "FAQs"]
+      }
+    },
+    "social": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    },
+    "bottom": {
+      "copyright": "Powered by Roma MPH, all copy right reserved",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of service"
+    },
+    "logoAlt": "CorporateFix Logo"
+  },
+  "Making": {
+    "title": "Making Your Dream Come True",
+    "description": "Since our establishment in 2010, CorporateFix has been a trusted name in consultancy and training. We specialize in developing tailored organizational frameworks and delivering solutions that help businesses thrive in competitive markets",
+    "contactButton": "Contact us",
+    "imageAlt": {
+      "stroke": "Decorative stroke",
+      "logo": "CorporateFix Logo"
+    }
+  },
+  "Belief": {
+    "sectionTitle": "Our Belief",
+    "mainTitle": "Belief Of Innovation And Growth",
+    "subtitle": "Rooted in Integrity, Driven by Collaboration, Guided by Excellence",
+    "values": [
+      {
+        "title": "Our Vision",
+        "description": "We envision businesses operating as cohesive, high-performing entities, driven by innovation, sustainability, and seamless integration. We partner with organizations to achieve their goals efficiently while inspiring their teams and creating lasting value."
+      },
+      {
+        "title": "Our Mission",
+        "description": "We are dedicated to enabling sustainable growth and productivity in organizations by advocating progressive governance systems, professionalism and performance standards."
+      },
+      {
+        "title": "Our Values",
+        "description": "• Integrity: Building partnerships based on trust and transparency\n• Innovation: Creating solutions that push boundaries\n• Sustainability: Focusing on long-term success\n• Empowerment: Enhancing businesses and individuals to unlock their potential"
+      }
+    ]
+  },
+  "Team": {
+    "header": {
+      "title": "Meet Our Team",
+      "subtitle": "Rooted in Integrity, Driven by Collaboration, Guided by Excellence"
+    },
+    "members": [
+      {
+        "id": 1,
+        "name": "Jack Karo",
+        "role": "CEO & Co-Founder",
+        "position": "Senior Technical Supervisor",
+        "socialLinks": {
+          "linkedin": "https://linkedin.com",
+          "twitter": "https://twitter.com",
+          "instagram": "https://instagram.com"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Jane Doe",
+        "role": "CTO & Co-Founder",
+        "position": "Lead Software Engineer",
+        "socialLinks": {
+          "linkedin": "https://linkedin.com",
+          "twitter": "https://twitter.com",
+          "instagram": "https://instagram.com"
+        }
+      },
+      {
+        "id": 3,
+        "name": "John Smith",
+        "role": "COO",
+        "position": "Operations Manager",
+        "socialLinks": {
+          "linkedin": "https://linkedin.com",
+          "twitter": "https://twitter.com",
+          "instagram": "https://instagram.com"
+        }
+      }
+    ]
+  },
+  "Industries": {
+    "header": {
+      "subtitle": "Our Services",
+      "title": "Industries We Serve",
+      "description": "CorporateFix has extensive experience serving a diverse range of industries, including"
+    },
+    "industries": [
+      {
+        "title": "Construction",
+        "icon": "constructionIcon"
+      },
+      {
+        "title": "Pharmaceuticals",
+        "icon": "pharmaceuticalsIcon"
+      },
+      {
+        "title": "Education",
+        "icon": "educationIcon"
+      },
+      {
+        "title": "Retail",
+        "icon": "storeIcon"
+      },
+      {
+        "title": "Manufacturing",
+        "icon": "manufacturingIcon"
+      },
+      {
+        "title": "Medical Equipment",
+        "icon": "medicalIcon"
+      },
+      {
+        "title": "Service Providers",
+        "icon": "serviceIcon"
+      }
+    ]
   }
 }

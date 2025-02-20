@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import team1 from "@/public/images/team1.svg";
 import team2 from "@/public/images/team2.svg";
 import team3 from "@/public/images/team3.svg";
+import { useTranslations } from "next-intl";
 
 interface TeamMember {
   id: number;
@@ -94,58 +97,24 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
 };
 
 const Team = () => {
-  const teamMembers: TeamMember[] = [
-    {
-      id: 1,
-      name: "Jack Karo",
-      role: "CEO & Co-Founder",
-      position: "Senior Technical Supervisor",
-      image: team1, // Replace with your image path
-      socialLinks: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        instagram: "https://instagram.com",
-      },
-    },
-    {
-      id: 2,
-      name: "Jack Karo",
-      role: "CEO & Co-Founder",
-      position: "Senior Technical Supervisor",
-      image: team2, // Replace with your image path
-      socialLinks: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        instagram: "https://instagram.com",
-      },
-    },
-    {
-      id: 3,
-      name: "Jack Karo",
-      role: "CEO & Co-Founder",
-      position: "Senior Technical Supervisor",
-      image: team3, // Replace with your image path
-      socialLinks: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        instagram: "https://instagram.com",
-      },
-    },
-  ];
+  const t = useTranslations("Team");
+
+  const teamMembers: TeamMember[] = t
+    .raw("members")
+    .map((member: TeamMember, index: number) => ({
+      ...member,
+      image: [team1, team2, team3][index], // Dynamically assign images
+    }));
 
   return (
-    <section className="w-full py-16 ">
+    <section className="w-full py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-[#0d519d] text-4xl font-bold mb-4">
-            Meet Our team
+            {t("header.title")}
           </h2>
-          <p className="text-gray-600">
-            Rooted in Integrity, Driven by Collaboration,
-            <br />
-            Guided by Excellence
-          </p>
+          <p className="text-gray-600">{t("header.subtitle")}</p>
         </div>
 
         {/* Team Members Grid */}
