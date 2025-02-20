@@ -1,0 +1,102 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About us",
+    "services": "Services",
+    "contact": "Contact us",
+    "title": "Your Title",
+    "logoAlt": "Logo",
+    "searchAlt": "Search",
+    "toggleMenu": "Toggle Menu"
+  },
+  "Hero": {
+    "mainTitle": "Strategic Partner, for Lasting Growth",
+    "subTitle": "Your most Trusted Partner for Evolving.",
+    "tagline": "Experience, Expertise, Efficiency",
+    "contactButton": "Contact us",
+    "learnMoreButton": "Learn more",
+    "logoAlt": "logo"
+  },
+  "Welcome": {
+    "greeting": "Hello!",
+    "title": "Welcome to CorporateFix",
+    "description": "CorporateFix is your strategic partner in redefining organizational success. Through our innovative \"Management-Fitness\" concept, we blend strategic management, categorical regulation logic, and corporate governance to transform workplaces into productive, harmonious environments",
+    "contactButton": "Contact us",
+    "imageAlt": {
+      "stroke": "stroke",
+      "curvedLine": "curved line"
+    }
+  },
+  "Partner": {
+    "sectionTitle": "Our Values",
+    "mainTitle": "partner with lasting trust",
+    "subtitle": "Rooted in Integrity, Driven by Collaboration, Guided by Excellence",
+    "values": {
+      "honesty": {
+        "title": "Honesty & Integrity",
+        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+      },
+      "innovation": {
+        "title": "Innovation & Improvement",
+        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+      },
+      "sustainability": {
+        "title": "Sustainability & Governance",
+        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+      },
+      "empowerment": {
+        "title": "Professional & Personal Empowerment",
+        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+      }
+    }
+  },
+  "Empower": {
+    "sectionTitle": "Our Services",
+    "mainTitle": "Empowering Partners For Business Evolution",
+    "subtitle": "At CorporateFix, we provide a comprehensive range of services designed to elevate your organization's performance",
+    "seeMoreButton": "See more",
+    "seeLessButton": "See less",
+    "services": {
+      "managementFitness": {
+        "title": "Management Fitness Programs",
+        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+      },
+      "restructuring": {
+        "title": "Organizational Restructuring",
+        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+      },
+      "workplace": {
+        "title": "Workplace Environment",
+        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+      },
+      "gapAnalysis": {
+        "title": "Gap Analysis & Root Cause Solutions",
+        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+      },
+      "governance": {
+        "title": "Governance Implementation",
+        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+      },
+      "performance": {
+        "title": "Performance Improvement & Behavioral Development",
+        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+      },
+      "recruitment": {
+        "title": "Recruitment Solutions",
+        "description": "Using advanced analysis tools like Luscher and ESCO for talent selection and ensuring competency alignment with job requirements"
+      },
+      "salesLogistics": {
+        "title": "Sales & Logistics Optimization",
+        "description": "Designing innovative sales strategies to increase revenue and improving supply chain efficiency to reduce costs"
+      },
+      "training": {
+        "title": "Training & Development",
+        "description": "In collaboration with KHDA, we offer comprehensive training programs including self-development, successful relationships, sales techniques, effective leadership, gender communication, and emotion management"
+      }
+    }
+  }
+}
