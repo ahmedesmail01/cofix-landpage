@@ -17,9 +17,9 @@ const Welcome = () => {
       />
 
       <div>
-        <div className="text-center text-[#159861] text-base font-semibold ">
+        <bdi className="text-center text-[#159861] text-base font-semibold ">
           {t("greeting")}
-        </div>
+        </bdi>
         <div className="relative text-[#0d519d] text-2xl lg:text-[56px] font-semibold  leading-[68px]">
           {t("title")}
           <Image

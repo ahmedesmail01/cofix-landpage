@@ -41,13 +41,15 @@ const NavBar = () => {
     >
       <div className="flex items-center justify-between px-4 py-1 lg:py-3 lg:px-[120px]">
         {/* Logo */}
-        <Image
-          src={logo}
-          alt={t("logoAlt")}
-          width={80}
-          height={80}
-          className="lg:w-[80px] w-[40px]"
-        />
+        <Link href={"/"}>
+          <Image
+            src={logo}
+            alt={t("logoAlt")}
+            width={80}
+            height={80}
+            className="lg:w-[80px] w-[40px]"
+          />
+        </Link>
 
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center justify-between px-[120px] pb-2">
