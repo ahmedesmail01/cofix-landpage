@@ -1,24 +1,49 @@
 "use client";
-import React, { useState } from "react";
+
+import React from "react";
 import Image from "next/image";
 import avatar from "@/public/images/avatar-form-contact.svg";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
+
+// Define Zod schema for form validation
+const contactSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  phone: z.string().optional(),
+  message: z.string().min(1, "Message is required"),
+});
+
+// Define TypeScript type for form data
+type ContactFormData = z.infer<typeof contactSchema>;
 
 const ContactComp = () => {
   const t = useTranslations("Contact");
   const locale = useLocale();
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
+  // Initialize React Hook Form with Zod validation
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(formData);
+  // Handle form submission
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      const response = await axios.post("/api/contact", data);
+      console.log("Form submitted successfully:", response.data);
+      alert("Form submitted successfully!");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred while submitting the form.");
+    }
   };
 
   return (
@@ -47,7 +72,7 @@ const ContactComp = () => {
             </div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               {/* Name Input */}
               <div>
                 <label
@@ -59,14 +84,19 @@ const ContactComp = () => {
                 <input
                   type="text"
                   id="name"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  {...register("name")}
+                  className={`w-full px-4 py-2 border ${
+                    errors.name ? "border-red-500" : "border-gray-300"
+                  } rounded-md focus:outline-none focus:ring-2 ${
+                    errors.name ? "focus:ring-red-500" : "focus:ring-blue-500"
+                  }`}
                   placeholder={t("form.name.placeholder")}
-                  required
                 />
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.name.message}
+                  </p>
+                )}
               </div>
 
               {/* Email Input */}
@@ -80,14 +110,19 @@ const ContactComp = () => {
                 <input
                   type="email"
                   id="email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  {...register("email")}
+                  className={`w-full px-4 py-2 border ${
+                    errors.email ? "border-red-500" : "border-gray-300"
+                  } rounded-md focus:outline-none focus:ring-2 ${
+                    errors.email ? "focus:ring-red-500" : "focus:ring-blue-500"
+                  }`}
                   placeholder={t("form.email.placeholder")}
-                  required
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.email.message}
+                  </p>
+                )}
               </div>
 
               {/* Phone Input */}
@@ -101,10 +136,7 @@ const ContactComp = () => {
                 <input
                   type="tel"
                   id="phone"
-                  value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
+                  {...register("phone")}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder={t("form.phone.placeholder")}
                 />
@@ -120,23 +152,31 @@ const ContactComp = () => {
                 </label>
                 <textarea
                   id="message"
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
+                  {...register("message")}
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className={`w-full px-4 py-2 border ${
+                    errors.message ? "border-red-500" : "border-gray-300"
+                  } rounded-md focus:outline-none focus:ring-2 ${
+                    errors.message
+                      ? "focus:ring-red-500"
+                      : "focus:ring-blue-500"
+                  }`}
                   placeholder={t("form.message.placeholder")}
-                  required
                 />
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.message.message}
+                  </p>
+                )}
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#0d519d] text-white py-2 px-6 rounded-md hover:bg-blue-600 transition-colors"
+                disabled={isSubmitting}
+                className="w-full bg-[#0d519d] text-white py-2 px-6 rounded-md hover:bg-blue-600 transition-colors disabled:opacity-50"
               >
-                {t("form.submitButton")}
+                {isSubmitting ? "Submitting..." : t("form.submitButton")}
               </button>
             </form>
           </div>
