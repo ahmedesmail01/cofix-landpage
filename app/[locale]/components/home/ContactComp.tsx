@@ -9,11 +9,12 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 // Define Zod schema for form validation
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
-  email: z.string().email("Invalid email address"),
+  mail: z.string().email("Invalid email address"),
   phone: z.string().optional(),
   message: z.string().min(1, "Message is required"),
 });
@@ -37,12 +38,26 @@ const ContactComp = () => {
   // Handle form submission
   const onSubmit = async (data: ContactFormData) => {
     try {
-      const response = await axios.post("/api/contact", data);
+      console.log("Submitting form:", data);
+
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_BASE_URL}`,
+        data
+      );
       console.log("Form submitted successfully:", response.data);
-      alert("Form submitted successfully!");
+      Swal.fire({
+        title: "Good job!",
+        text: "success!",
+        icon: "success",
+      });
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("An error occurred while submitting the form.");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+        footer: '<a href="#">Why do I have this issue?</a>',
+      });
     }
   };
 
@@ -110,17 +125,17 @@ const ContactComp = () => {
                 <input
                   type="email"
                   id="email"
-                  {...register("email")}
+                  {...register("mail")}
                   className={`w-full px-4 py-2 border ${
-                    errors.email ? "border-red-500" : "border-gray-300"
+                    errors.mail ? "border-red-500" : "border-gray-300"
                   } rounded-md focus:outline-none focus:ring-2 ${
-                    errors.email ? "focus:ring-red-500" : "focus:ring-blue-500"
+                    errors.mail ? "focus:ring-red-500" : "focus:ring-blue-500"
                   }`}
                   placeholder={t("form.email.placeholder")}
                 />
-                {errors.email && (
+                {errors.mail && (
                   <p className="text-red-500 text-sm mt-1">
-                    {errors.email.message}
+                    {errors.mail.message}
                   </p>
                 )}
               </div>
