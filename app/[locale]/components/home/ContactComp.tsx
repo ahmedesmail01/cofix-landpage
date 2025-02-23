@@ -16,7 +16,7 @@ const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
   mail: z.string().email("Invalid email address"),
   phone: z.string().optional(),
-  message: z.string().min(1, "Message is required"),
+  message: z.string().max(2000).optional(),
 });
 
 // Define TypeScript type for form data
