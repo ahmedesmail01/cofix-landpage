@@ -19,6 +19,19 @@ html {
   font-family: var(--font-cabin-condensed), sans-serif;
 }
 
+.blue_circle {
+  width: 1000px;
+  height: 1000px;
+  /* Remove or overwrite any solid background-color */
+  background: radial-gradient(
+    circle,
+    #ccd9e7 0%,
+    /* rgba(3, 35, 69, 0) 50%, */ rgba(204, 217, 231, 0) 50%
+  );
+
+  border-radius: 50%; /* Makes it circular */
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;

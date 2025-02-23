@@ -18,7 +18,7 @@ const ContactHero = () => {
         className="top-10 left-1/2 -translate-x-1/2 absolute"
       />
 
-      <div className="flex flex-col items-center justify-center p-4 lg:pt-[500px] pt-[100px] z-10">
+      <div className="flex flex-col items-center justify-center p-4 lg:pt-[300px] pt-[100px] z-10">
         {/* Logo */}
         <Image
           width={180}
@@ -34,7 +34,7 @@ const ContactHero = () => {
         </h1>
 
         {/* Description */}
-        <p className="text-center text-[#5e5959] text-base lg:text-2xl font-normal font-['Cabin Condensed']">
+        <p className="text-center text-[#5e5959] text-base lg:text-2xl font-normal lg:max-w-[800px] ">
           {t("description")}
         </p>
       </div>

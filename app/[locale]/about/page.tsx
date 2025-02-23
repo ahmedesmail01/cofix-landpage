@@ -8,7 +8,10 @@ import ContactComp from "../components/home/ContactComp";
 
 const page = () => {
   return (
-    <div className="flex flex-col gap-10 lg:gap-[140px] row-start-2 items-center ">
+    <div className="flex overflow-hidden relative flex-col gap-10 lg:gap-[140px] row-start-2 items-center ">
+      <div className="blue_circle hidden lg:block absolute top-[300px] -left-[300px] -z-10" />
+      <div className="blue_circle hidden lg:block absolute top-[1000px] -right-[300px] -z-10" />
+      <div className="blue_circle hidden lg:block absolute top-[3000px] -left-[300px] -z-10" />
       <Making />
       <Belief />
       <Team />

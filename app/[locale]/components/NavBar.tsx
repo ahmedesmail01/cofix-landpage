@@ -75,7 +75,7 @@ const NavBar = () => {
             onClick={handleLanguageChange}
             className="px-3 hidden  lg:block py-1 rounded-md bg-[#0D519D] text-white hover:bg-blue-700 transition-colors"
           >
-            {locale === "en" ? "عربي" : "English"}
+            {locale === "en" ? "العربية" : "English"}
           </button>
 
           {/* Search Icon (Desktop only) */}
