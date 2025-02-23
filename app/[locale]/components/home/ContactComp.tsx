@@ -41,7 +41,8 @@ const ContactComp = () => {
       console.log("Submitting form:", data);
 
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_BASE_URL}`,
+        // `${process.env.NEXT_PUBLIC_BASE_URL}`,
+        "https://corporatefix.net/backend/api/websiteLead",
         data
       );
       console.log("Form submitted successfully:", response.data);
