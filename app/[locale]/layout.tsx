@@ -1,4 +1,4 @@
-import { Roboto } from "next/font/google";
+// import { Roboto } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/home/Footer";
@@ -20,11 +20,11 @@ interface LocaleLayoutProps {
 }
 
 // Load Roboto font for English
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"], // Adjust weights as needed
-});
+// const roboto = Roboto({
+//   variable: "--font-roboto",
+//   subsets: ["latin"],
+//   weight: ["400", "500", "700"], // Adjust weights as needed
+// });
 
 // Load PNU font for Arabic (local font)
 const pnu = localFont({
@@ -41,6 +41,17 @@ const pnu = localFont({
     },
   ],
   variable: "--font-pnu",
+});
+
+const cabin = localFont({
+  src: [
+    {
+      path: "../../public/fonts/CabinCondensed-SemiBold.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-cabin",
 });
 
 // Move metadata to a server-side context
@@ -68,7 +79,7 @@ export default async function LocaleLayout({
     <html dir={locale === "ar" ? "rtl" : "ltr"} lang={locale}>
       <body
         className={`antialiased bg-[#f5f5f7] ${
-          locale === "ar" ? pnu.className : roboto.variable
+          locale === "ar" ? pnu.className : cabin.className
         }`}
       >
         <NextIntlClientProvider messages={messages}>

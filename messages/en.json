@@ -63,27 +63,27 @@
     "services": {
       "managementFitness": {
         "title": "Management Fitness Programs",
-        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+        "description": "Designing and implementing comprehensive performance management systems aligned with organizational goals"
       },
       "restructuring": {
         "title": "Organizational Restructuring",
-        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+        "description": "Improving organizational structures and refining roles to enhance efficiency"
       },
       "workplace": {
         "title": "Workplace Environment",
-        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+        "description": "Transforming stressful environments into productive and collaborative spaces by establishing clear policies "
       },
       "gapAnalysis": {
         "title": "Gap Analysis & Root Cause Solutions",
-        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+        "description": "Identifying performance deficiencies using advanced analysis tools"
       },
       "governance": {
         "title": "Governance Implementation",
-        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+        "description": "Establishing automated governance systems to simplify processes and ensure compliance"
       },
       "performance": {
         "title": "Performance Improvement & Behavioral Development",
-        "description": "We believe in transparency, ethical practices, and honoring our commitments to build trust with clients and partners"
+        "description": "Developing employee skills through customized training programs"
       },
       "recruitment": {
         "title": "Recruitment Solutions",
@@ -339,8 +339,8 @@
       {
         "title": "Organizational Restructuring",
         "description": [
-          "Designing and implementing comprehensive performance management systems aligned with organizational goals.",
-          "Developing dashboards to monitor results and connect them to strategic objectives."
+          "Improving organizational structures and refining roles to enhance efficiency.",
+          "Streamlining workflows to ensure operational fluidity and minimize complexity."
         ]
       },
       {

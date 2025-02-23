@@ -11,7 +11,7 @@ const Building = () => {
   const [activeTimeouts, setActiveTimeouts] = useState<TimeoutsMap>({});
 
   const getRandomColor = () => {
-    return Math.random() < 0.5 ? "#159861" : "#8a38f5"; // Green or Blue
+    return Math.random() < 0.5 ? "#159861" : "#007AFF"; // Green or Blue
   };
 
   const getRandomBasicColor = () => {

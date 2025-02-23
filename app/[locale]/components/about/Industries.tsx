@@ -8,7 +8,7 @@ import educationIcon from "@/public/images/Education.svg";
 import manufacturingIcon from "@/public/images/Manufacturing.svg";
 import medicalIcon from "@/public/images/Medical Equipment.svg";
 import serviceIcon from "@/public/images/Service Providers.svg";
-import { Store } from "lucide-react";
+import storeIcon from "@/public/images/storeIcon.svg";
 import { useTranslations } from "next-intl";
 
 // Define the icons object with proper types
@@ -19,7 +19,7 @@ const icons = {
   manufacturingIcon,
   medicalIcon,
   serviceIcon,
-  storeIcon: <Store className="text-[#0d519d]" />,
+  storeIcon,
 };
 
 type IconKey = keyof typeof icons; // Restrict to keys of the `icons` object
@@ -36,22 +36,16 @@ interface IndustryData {
 
 const IndustryCard = ({ icon, title }: Industry) => {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-sm flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
+    <div className="bg-white w-full h-[200px] lg:w-[218px] p-8 rounded-lg shadow-sm flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
       <div className="w-16 h-16 mb-4 relative">
         <div className="absolute inset-0 rounded-full flex items-center justify-center">
-          {title === "Retail" || title === "تجارة التجزئة" ? (
-            <div className="flex items-center justify-center p-6 rounded-full bg-[#e8f3ff]">
-              {icon}
-            </div>
-          ) : (
-            <Image
-              src={icon as string}
-              alt={title}
-              width={32}
-              height={32}
-              className="w-16 h-16 text-[#0d519d]"
-            />
-          )}
+          <Image
+            src={icon as string}
+            alt={title}
+            width={32}
+            height={32}
+            className="w-16 h-16 text-[#0d519d]"
+          />
         </div>
       </div>
       <h3 className="text-center text-gray-800 font-medium">{title}</h3>
@@ -79,13 +73,15 @@ const Industries = () => {
           <h2 className="text-[#0d519d] text-4xl font-bold mb-4">
             {t("header.title")}
           </h2>
-          <bdi className="text-gray-600 max-w-2xl mx-auto">
-            {t("header.description")}
-          </bdi>
+          <div className="lg:w-[400px] w-full mx-auto">
+            <bdi className="text-gray-600 w-full mx-auto">
+              {t("header.description")}
+            </bdi>
+          </div>
         </div>
 
         {/* Industries Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center  gap-6 max-w-6xl mx-auto">
           {industries.map((industry, index) => (
             <IndustryCard
               key={index}
